@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  font-family: "Open Sans"; }
+
+.header {
+  padding: 1rem 2rem;
+  display: flex; }
+  .header__logo {
+    height: 5rem;
+    margin-right: auto; }
+
+.user-nav {
+  display: flex;
+  align-self: stretch; }
+  .user-nav__list {
+    list-style: none;
+    display: flex; }
+  .user-nav__item {
+    display: flex; }
+    .user-nav__item:not(:last-child) {
+      margin-right: 1.5rem; }
+  .user-nav__link:link, .user-nav__link:visited {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 1rem .8rem;
+    transition: all .2s;
+    border-bottom: 2px solid transparent;
+    font-weight: 600; }
+  .user-nav__link:hover, .user-nav__link:active {
+    border-bottom: 2px solid black; }
+
+.container {
+  height: 100vh; }
