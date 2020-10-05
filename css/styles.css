@@ -9,14 +9,16 @@ html {
 
 .header {
   padding: 1rem 2rem;
-  display: flex; }
+  display: flex;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
   .header__logo {
     height: 5rem;
     margin-right: auto; }
 
 .user-nav {
   display: flex;
-  align-self: stretch; }
+  align-self: stretch;
+  margin-right: 4rem; }
   .user-nav__list {
     list-style: none;
     display: flex; }
@@ -24,18 +26,34 @@ html {
     display: flex; }
     .user-nav__item:not(:last-child) {
       margin-right: 1.5rem; }
-  .user-nav__link:link, .user-nav__link:visited {
-    font-size: 1.6rem;
-    text-decoration: none;
-    color: black;
-    display: flex;
-    align-items: center;
-    padding: 1rem .8rem;
-    transition: all .2s;
-    border-bottom: 2px solid transparent;
-    font-weight: 600; }
-  .user-nav__link:hover, .user-nav__link:active {
-    border-bottom: 2px solid black; }
+  .user-nav__link {
+    position: relative; }
+    .user-nav__link:link, .user-nav__link:visited {
+      font-size: 1.6rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      padding: 0rem .5rem;
+      transition: all .2s;
+      font-weight: 600;
+      background: linear-gradient(to right, red, green, blue);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      /*border-right: 1px solid black;*/ }
+    .user-nav__link::before {
+      content: "";
+      display: inline-block;
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.2);
+      transition: all .8s; }
+    .user-nav__link:hover::before {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4); }
 
 .container {
   height: 100vh; }
