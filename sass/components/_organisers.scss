@@ -1,0 +1,28 @@
+.section__organisers{
+    background-color: 	#f2f7ff;
+}
+
+.organisers-row{
+// display:grid;
+//  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+//  gap: 1rem 1rem;
+}
+
+.profile{
+&-card {
+    // position: relative;
+//     // height: 250px;
+//     float: left;
+//   width: 25%;
+//   padding: 0 10px;
+// display: inline-block;
+// width: 200px;
+}
+&-pic{
+    width:100%;
+    height:auto;
+    border-radius: 50%;
+}
+}
+
+
