@@ -1,8 +1,8 @@
 .events {
-	//border: 1px solid red;
 	padding: 10rem 0;
 	display: flex;
 	flex-direction: column;
+	border-bottom: 5px solid #ddd;
 }
 
 .event-type {
@@ -20,16 +20,26 @@
 	display: flex;
 	justify-content: space-around;
 	color: white;
+
+	@media only screen and (max-width: 900px) {
+		flex-direction: column;
+		align-self: center;
+	} 
 }
 
 .card {
 	padding: 3rem 2rem;
 	/*box-shadow: 2px 5px 5px rgba(0,0,0,.5);*/
-	height: 20rem;
+	/*height: 20rem;*/
 	transition: transform .5s;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+
+	@media only screen and (max-width: 900px) {
+		&:not(:last-child) {
+			margin-bottom: 8rem;
+		}
+	}
 
 	&--1 {
 /*		border-top: 8px solid red;
@@ -73,7 +83,54 @@
 	}
 
 	&:hover {
-		transform: scale(1.1);
+		/*transform: scale(1.1);*/
 	}
+
+}
+
+.card__btn {
+
+	&:link, &:visited {
+	padding: 1rem;
+	border: none;
+	font-size: 2rem;
+	border-radius: 5px;
+	color: #1c56a2;
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+	font-weight: 600;
+	text-align: center;
+	text-transform: uppercase;
+	}
+
+
+	&--1:link,&--1:visited {
+		background-color: white;
+		color: #ff3b18;
+	}
+
+	&--1:hover {
+		background-color: #ff3b18;
+		color: white;
+	}
+
+	&--2:link,&--2:visited {
+		background-color: white;
+		color: #40a21c;
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
+	&--2-1:link,&--2--1:visited {
+		background-color: white;
+		color: #1c56a2;
+	}
+
+	&--2-1:hover {
+		background-color: #1c56a2;
+		color: white;
+	}	
+
 
 }

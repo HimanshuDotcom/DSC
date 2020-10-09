@@ -22,7 +22,14 @@ h3 {
 
 html {
   font-size: 62.5%;
-  font-family: "Open Sans"; }
+  font-family: "Open Sans";
+  letter-spacing: 2px; }
+  @media only screen and (max-width: 900px) {
+    html {
+      font-size: 50%; } }
+
+.u-margin-bottom {
+  margin-bottom: 3rem; }
 
 .header {
   padding: 1rem 2rem;
@@ -85,6 +92,9 @@ html {
   .banner > * {
     flex: 1;
     margin-bottom: 30px; }
+  @media only screen and (max-width: 900px) {
+    .banner-img-div {
+      display: none; } }
   .banner-img-div img {
     max-width: 100%;
     height: auto;
@@ -131,7 +141,8 @@ html {
 .events {
   padding: 10rem 0;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  border-bottom: 5px solid #ddd; }
 
 .event-type {
   align-self: center;
@@ -143,15 +154,21 @@ html {
   display: flex;
   justify-content: space-around;
   color: white; }
+  @media only screen and (max-width: 900px) {
+    .event-cards {
+      flex-direction: column;
+      align-self: center; } }
 
 .card {
   padding: 3rem 2rem;
   /*box-shadow: 2px 5px 5px rgba(0,0,0,.5);*/
-  height: 20rem;
+  /*height: 20rem;*/
   transition: transform .5s;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
+  flex-direction: column; }
+  @media only screen and (max-width: 900px) {
+    .card:not(:last-child) {
+      margin-bottom: 8rem; } }
   .card--1 {
     /*		border-top: 8px solid red;
 */
@@ -176,4 +193,39 @@ html {
   .card__status {
     font-size: 1.8rem; }
   .card:hover {
-    transform: scale(1.1); }
+    /*transform: scale(1.1);*/ }
+
+.card__btn:link, .card__btn:visited {
+  padding: 1rem;
+  border: none;
+  font-size: 2rem;
+  border-radius: 5px;
+  color: #1c56a2;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase; }
+
+.card__btn--1:link, .card__btn--1:visited {
+  background-color: white;
+  color: #ff3b18; }
+
+.card__btn--1:hover {
+  background-color: #ff3b18;
+  color: white; }
+
+.card__btn--2:link, .card__btn--2:visited {
+  background-color: white;
+  color: #40a21c;
+  opacity: 0.5;
+  cursor: not-allowed; }
+
+.card__btn--2-1:link, .card__btn--2--1:visited {
+  background-color: white;
+  color: #1c56a2; }
+
+.card__btn--2-1:hover {
+  background-color: #1c56a2;
+  color: white; }
