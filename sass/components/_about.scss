@@ -8,7 +8,8 @@
 .about{
 
   &__text-box{
-     padding-top:3rem;
+     padding-top:4rem;
+    
   
     .heading-secondary{
      
@@ -80,5 +81,11 @@ transform: translateX(10rem);
   100% {
 opacity: 1;
 transform: translate(0);
+  }
+}
+
+@media(max-width:736px){
+  .section-about{
+    flex-flow: column;
   }
 }

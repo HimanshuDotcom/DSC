@@ -1,25 +1,48 @@
 .section__organisers{
     background-color: 	#f2f7ff;
+    text-align: center;
+    padding-top:3rem;
+    .heading-secondary{
+     
+    
+        font-weight: 700;
+        font-size: 5rem;
+        margin-bottom: 1rem;
+       
+        }
 }
 
+// .underlined {
+//     position: relative;
+//   }
+  
+//   .underlined::after {
+//     content: "";
+//     position: absolute;
+//     display: inline-block;
+//     height: 12px;
+//     width: 100%;
+//     left: 0;
+//     bottom: 10px;
+//     z-index: -1;
+//     background-color: red;
+//   }
+
+
 .organisers-row{
-// display:grid;
-//  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-//  gap: 1rem 1rem;
+padding:2rem;
 }
 
 .profile{
 &-card {
-    // position: relative;
-//     // height: 250px;
-//     float: left;
-//   width: 25%;
-//   padding: 0 10px;
-// display: inline-block;
-// width: 200px;
+ 
+text-align: center;
+display: inline-block;
+margin: 2rem;
+
 }
 &-pic{
-    width:100%;
+    width:15rem;
     height:auto;
     border-radius: 50%;
 }

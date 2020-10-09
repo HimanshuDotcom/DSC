@@ -115,10 +115,6 @@ html {
   background-color: #ffffff;
   color: blue; }
 
-.btn--white:hover {
-  background-color: blue;
-  color: #fff; }
-
 @keyframes moveInBottom {
   0% {
     opacity: 0;
@@ -134,7 +130,7 @@ html {
   color: #273339; }
 
 .about__text-box {
-  padding-top: 3rem; }
+  padding-top: 4rem; }
   .about__text-box .heading-secondary {
     font-weight: 700;
     font-size: 5rem;
@@ -185,18 +181,28 @@ html {
     opacity: 1;
     transform: translate(0); } }
 
+@media (max-width: 736px) {
+  .section-about {
+    flex-flow: column; } }
+
 .section__organisers {
-  background-color: #f2f7ff; }
+  background-color: #f2f7ff;
+  text-align: center;
+  padding-top: 3rem; }
+  .section__organisers .heading-secondary {
+    font-weight: 700;
+    font-size: 5rem;
+    margin-bottom: 1rem; }
 
 .organisers-row {
-  display: grid;
-  grid-auto-flow: 50px; }
+  padding: 2rem; }
 
 .profile-card {
-  position: relative;
-  height: 250px; }
+  text-align: center;
+  display: inline-block;
+  margin: 2rem; }
 
 .profile-pic {
-  width: 100%;
+  width: 15rem;
   height: auto;
   border-radius: 50%; }
